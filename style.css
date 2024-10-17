@@ -1,0 +1,58 @@
+:root{
+    --salmon: #ef9071;
+    --dsalmon: #542621;
+    --black: #000;
+    --white: #fff;
+    --cyan: #aedee0;
+    --dcyan: #1f2f32;
+}
+
+body{
+    transition: background-color .5s ease-in-out;
+}
+
+.videoDiv{
+    clip-path: circle(var(--clip) at 50% 50%);
+}
+
+::selection{
+    background-color: salmon;
+}
+
+body[theme='black']{
+    background-color: var(--black);
+}
+body[theme='black'] .section{
+    color: var(--white);
+}
+body[theme='black'] .capsule, .listItem{
+    border-color: var(--white);
+}
+
+
+
+body[theme='cyan']{
+    background-color: var(--cyan);
+}
+body[theme='cyan'] .section{
+    color: var(--dcyan);
+}
+
+
+body[theme='salmon']{
+    background-color: var(--salmon);
+}
+body[theme='salmon'] .section{
+    color: var(--dsalmon);
+}
+
+
+body[theme='white']{
+    background-color: var(--white);
+}
+body[theme='white'] .section{
+    color: var(--black);
+}
+body[theme='white']  .listItem{
+    border-color: var(--black);
+}
